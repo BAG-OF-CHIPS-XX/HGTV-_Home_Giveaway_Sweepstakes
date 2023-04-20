@@ -28,10 +28,16 @@ DIY_URL = 'https://www.foodnetwork.com/sponsored/sweepstakes/hgtv-smart-home-swe
 """
 Do not edit anything below this line unless you know what you are doing.
 """
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument(f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36')
+chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation","enable-logging"])
+chrome_options.add_experimental_option('useAutomationExtension', False)
+chrome_options.add_argument('--no-sandbox')
 try:
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(chrome_options=chrome_options)
 except:
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
 # ##HGTV
 driver.get(HGTV_URL)
 get_HGTV_source = driver.page_source
