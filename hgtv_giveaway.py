@@ -18,9 +18,8 @@ INSTRUCTIONS:
 
 EMAIL = ''
 
-HGTV_URL = 'https://www.hgtv.com/sweepstakes/hgtv-smart-home/sweepstakes/'
-DIY_URL = 'https://www.foodnetwork.com/sponsored/sweepstakes/hgtv-smart-home-sweepstakes'
-
+HGTV_URL = 'https://www.hgtv.com/sweepstakes/hgtv-urban-oasis/sweepstakes'
+DIY_URL = 'https://www.foodnetwork.com/sponsored/sweepstakes/hgtv-urban-oasis-sweepstakes'
 
 
 
